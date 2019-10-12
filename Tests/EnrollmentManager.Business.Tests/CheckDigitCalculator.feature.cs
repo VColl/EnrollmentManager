@@ -126,7 +126,15 @@ this.EnrollmentNumberBetween0000And9999("1000", "5", ((string[])(null)));
         public virtual void EnrollmentNumberBetween0000And9999_0954()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("0954", "14", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("0954", "11", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Enrollment number between 0000 and 9999, 954", SourceLine=9)]
+        public virtual void EnrollmentNumberBetween0000And9999_954()
+        {
+#line 4
+this.EnrollmentNumberBetween0000And9999("954", "11", ((string[])(null)));
 #line hidden
         }
         
@@ -134,7 +142,7 @@ this.EnrollmentNumberBetween0000And9999("0954", "14", ((string[])(null)));
         public virtual void EnrollmentNumberBetween0000And9999_1334()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("1334", "10", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("1334", "2", ((string[])(null)));
 #line hidden
         }
         
@@ -142,7 +150,7 @@ this.EnrollmentNumberBetween0000And9999("1334", "10", ((string[])(null)));
         public virtual void EnrollmentNumberBetween0000And9999_1392()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("1392", "10", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("1392", "0", ((string[])(null)));
 #line hidden
         }
         
@@ -150,7 +158,7 @@ this.EnrollmentNumberBetween0000And9999("1392", "10", ((string[])(null)));
         public virtual void EnrollmentNumberBetween0000And9999_1486()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("1486", "12", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("1486", "9", ((string[])(null)));
 #line hidden
         }
         
@@ -158,7 +166,7 @@ this.EnrollmentNumberBetween0000And9999("1486", "12", ((string[])(null)));
         public virtual void EnrollmentNumberBetween0000And9999_1548()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("1548", "0", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("1548", "5", ((string[])(null)));
 #line hidden
         }
         
@@ -166,31 +174,31 @@ this.EnrollmentNumberBetween0000And9999("1548", "0", ((string[])(null)));
         public virtual void EnrollmentNumberBetween0000And9999_1717()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("1717", "12", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("1717", "2", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Enrollment number between 0000 and 9999, 2881", SourceLine=9)]
+        [TechTalk.SpecRun.ScenarioAttribute("Enrollment number between 0000 and 9999, 2 881", SourceLine=9)]
         public virtual void EnrollmentNumberBetween0000And9999_2881()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("2881", "10", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("2 881", "4", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Enrollment number between 0000 and 9999, 2931", SourceLine=9)]
+        [TechTalk.SpecRun.ScenarioAttribute("Enrollment number between 0000 and 9999, 293 1", SourceLine=9)]
         public virtual void EnrollmentNumberBetween0000And9999_2931()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("2931", "5", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("293 1", "9", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Enrollment number between 0000 and 9999, 8972", SourceLine=9)]
+        [TechTalk.SpecRun.ScenarioAttribute("Enrollment number between 0000 and 9999, 89 7  2", SourceLine=9)]
         public virtual void EnrollmentNumberBetween0000And9999_8972()
         {
 #line 4
-this.EnrollmentNumberBetween0000And9999("8972", "6", ((string[])(null)));
+this.EnrollmentNumberBetween0000And9999("89 7  2", "5", ((string[])(null)));
 #line hidden
         }
         
@@ -199,6 +207,116 @@ this.EnrollmentNumberBetween0000And9999("8972", "6", ((string[])(null)));
         {
 #line 4
 this.EnrollmentNumberBetween0000And9999("9105", "11", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void InvalidFormat(string enrollmentNumber, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Format", null, exampleTags);
+#line 27
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 28
+ testRunner.When("I input the enrollment {enrollmentNumber}", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+ testRunner.Then("the method should throw a FormatException", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 0", SourceLine=32)]
+        public virtual void InvalidFormat_Variant0()
+        {
+#line 27
+this.InvalidFormat("42315", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 1", SourceLine=32)]
+        public virtual void InvalidFormat_Variant1()
+        {
+#line 27
+this.InvalidFormat("43k5", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 2", SourceLine=32)]
+        public virtual void InvalidFormat_Variant2()
+        {
+#line 27
+this.InvalidFormat("-245", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 3", SourceLine=32)]
+        public virtual void InvalidFormat_Variant3()
+        {
+#line 27
+this.InvalidFormat("-5325", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 4", SourceLine=32)]
+        public virtual void InvalidFormat_Variant4()
+        {
+#line 27
+this.InvalidFormat("42-3", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 5", SourceLine=32)]
+        public virtual void InvalidFormat_Variant5()
+        {
+#line 27
+this.InvalidFormat("4.872", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 6", SourceLine=32)]
+        public virtual void InvalidFormat_Variant6()
+        {
+#line 27
+this.InvalidFormat("6.23", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 7", SourceLine=32)]
+        public virtual void InvalidFormat_Variant7()
+        {
+#line 27
+this.InvalidFormat("4,62", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 8", SourceLine=32)]
+        public virtual void InvalidFormat_Variant8()
+        {
+#line 27
+this.InvalidFormat("1/45", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 9", SourceLine=32)]
+        public virtual void InvalidFormat_Variant9()
+        {
+#line 27
+this.InvalidFormat(".", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 10", SourceLine=32)]
+        public virtual void InvalidFormat_Variant10()
+        {
+#line 27
+this.InvalidFormat("-", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Invalid Format, Variant 11", SourceLine=32)]
+        public virtual void InvalidFormat_Variant11()
+        {
+#line 27
+this.InvalidFormat("", ((string[])(null)));
 #line hidden
         }
         

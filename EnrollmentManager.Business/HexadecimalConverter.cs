@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace EnrollmentManager.Business
 {
-	public interface IHexadecimalConverter
+    public interface IHexadecimalConverter
 	{
 		/// <summary>
 		/// Converts an integer from decimal representation to the hexadecimal representation.
