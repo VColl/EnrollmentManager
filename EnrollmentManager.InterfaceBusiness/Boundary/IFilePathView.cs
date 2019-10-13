@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EnrollmentManager.Business.Boundary
+namespace EnrollmentManager.InterfaceBusiness.Boundary
 {
     public interface IFilePathView
     {

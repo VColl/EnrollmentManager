@@ -2,7 +2,12 @@
 
 namespace EnrollmentManager.Business
 {
-    public class FullEnrollmentNumberGenerator
+    public interface IFullEnrollmentNumberGenerator
+    {
+        string Generate(string enrollmentNumber);
+    }
+
+    public class FullEnrollmentNumberGenerator : IFullEnrollmentNumberGenerator
     {
         private readonly ICheckDigitCalculator _checkDigitCalculator;
         private readonly IHexadecimalConverter _hexadecimalConverter;

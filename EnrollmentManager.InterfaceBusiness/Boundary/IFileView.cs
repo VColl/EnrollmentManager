@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EnrollmentManager.Business.Boundary
+namespace EnrollmentManager.InterfaceBusiness.Boundary
 {
     public interface IFileView
     {
