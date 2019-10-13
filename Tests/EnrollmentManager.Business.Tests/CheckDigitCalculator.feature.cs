@@ -219,7 +219,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.When("I input the enrollment {enrollmentNumber}", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
- testRunner.Then("the method should throw a FormatException", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("A FormatException should be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

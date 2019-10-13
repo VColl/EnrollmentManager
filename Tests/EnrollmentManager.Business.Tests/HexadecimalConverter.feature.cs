@@ -210,6 +210,68 @@ this.ConvertingTheRange0_15("15", "F", ((string[])(null)));
 #line hidden
         }
         
+        public virtual void TryToConvertAValueOutsideTheRange0_15TrhowsException(string @decimal, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Try to convert a value outside the range 0-15 trhows exception", null, exampleTags);
+#line 27
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 28
+ testRunner.When(string.Format("I input the value {0}", @decimal), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+ testRunner.Then("An ArgumentOutOfRangeException should be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Try to convert a value outside the range 0-15 trhows exception, -1", SourceLine=32)]
+        public virtual void TryToConvertAValueOutsideTheRange0_15TrhowsException_1()
+        {
+#line 27
+this.TryToConvertAValueOutsideTheRange0_15TrhowsException("-1", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Try to convert a value outside the range 0-15 trhows exception, -23", SourceLine=32)]
+        public virtual void TryToConvertAValueOutsideTheRange0_15TrhowsException_23()
+        {
+#line 27
+this.TryToConvertAValueOutsideTheRange0_15TrhowsException("-23", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Try to convert a value outside the range 0-15 trhows exception, 16", SourceLine=32)]
+        public virtual void TryToConvertAValueOutsideTheRange0_15TrhowsException_16()
+        {
+#line 27
+this.TryToConvertAValueOutsideTheRange0_15TrhowsException("16", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Try to convert a value outside the range 0-15 trhows exception, 17", SourceLine=32)]
+        public virtual void TryToConvertAValueOutsideTheRange0_15TrhowsException_17()
+        {
+#line 27
+this.TryToConvertAValueOutsideTheRange0_15TrhowsException("17", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Try to convert a value outside the range 0-15 trhows exception, 100", SourceLine=32)]
+        public virtual void TryToConvertAValueOutsideTheRange0_15TrhowsException_100()
+        {
+#line 27
+this.TryToConvertAValueOutsideTheRange0_15TrhowsException("100", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Try to convert a value outside the range 0-15 trhows exception, 4214", SourceLine=32)]
+        public virtual void TryToConvertAValueOutsideTheRange0_15TrhowsException_4214()
+        {
+#line 27
+this.TryToConvertAValueOutsideTheRange0_15TrhowsException("4214", ((string[])(null)));
+#line hidden
+        }
+        
         [TechTalk.SpecRun.TestRunCleanup()]
         public virtual void TestRunCleanup()
         {

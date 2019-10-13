@@ -5,6 +5,7 @@ using TechTalk.SpecFlow;
 namespace EnrollmentManager.Business.Tests
 {
     [Binding]
+    [Scope(Feature = "CheckDigitCalculator")]
     public class CheckDigitCalculatorSteps
     {
         private int _result = -1;
@@ -31,7 +32,7 @@ namespace EnrollmentManager.Business.Tests
             Assert.AreEqual(checkDigit, _result);
         }
 
-        [Then(@"the method should throw a FormatException")]
+        [Then(@"A FormatException should be thrown")]
         public void ThenTheMethodShouldThrowAFormatException()
         {
             Assert.IsInstanceOfType(_exception, typeof(FormatException));

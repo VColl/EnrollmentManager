@@ -14,14 +14,12 @@ namespace EnrollmentManager.Business
 
     public class CheckDigitCalculator : ICheckDigitCalculator
     {
-        private const string FORMAT_ERROR_MESSAGE = "The enrollmentNumber should be a number between 0 and 9999";
-
         public int Calculate(string enrollmentNumber)
         {
             enrollmentNumber = enrollmentNumber.Trim().Replace(" ", string.Empty);
 
             if (!ValidateFormat(enrollmentNumber))
-                throw new FormatException(FORMAT_ERROR_MESSAGE);
+                throw new FormatException(ErrorMessage.INVALID_ENROLLMENT_NUMBER_FORMAT);
 
             int sum = 0;
 

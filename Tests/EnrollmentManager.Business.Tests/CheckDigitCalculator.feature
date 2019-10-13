@@ -26,7 +26,7 @@ Scenario Outline: Enrollment number between 0000 and 9999
 
 Scenario Outline: Invalid Format
 	When I input the enrollment {enrollmentNumber}
-	Then the method should throw a FormatException
+	Then A FormatException should be thrown
 
 	Examples:
 		| enrollmentNumber |
