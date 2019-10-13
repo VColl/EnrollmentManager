@@ -3,7 +3,12 @@ using System.IO;
 
 namespace EnrollmentManager.Business
 {
-    public class EnrollmentFileGenerator
+    public interface IEnrollmentFileGenerator
+    {
+        void Generate(string inputFilePath, string outputFilePath, bool ignoreInvalidLineInputs = false, string invalidInputLineIndicador = "Invalid Input");
+    }
+
+    public class EnrollmentFileGenerator : IEnrollmentFileGenerator
     {
         private readonly IFullEnrollmentNumberGenerator _generator;
 
@@ -12,7 +17,7 @@ namespace EnrollmentManager.Business
             _generator = generator;
         }
 
-        public void Validate(string inputFilePath, string outputFilePath, string invalidInputLineIndicador)
+        public void Generate(string inputFilePath, string outputFilePath, bool ignoreInvalidLineInputs = false, string invalidInputLineIndicador = "Invalid Input")
         {
             var inputLines = File.ReadAllLines(inputFilePath);
             var outputLines = new List<string>();
@@ -23,10 +28,12 @@ namespace EnrollmentManager.Business
                 try
                 {
                     outputLine = _generator.Generate(line);
-
                 }
                 catch
                 {
+                    if (ignoreInvalidLineInputs)
+                        continue;
+
                     outputLine = $"{invalidInputLineIndicador} ({line})";
                 }
 

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace EnrollmentManager.InterfaceBusiness.Boundary
 {
-    public interface IFilePathView
+    public interface INotifier
     {
-        string GetFilePath();
+        void ShowError(string message);
     }
 }

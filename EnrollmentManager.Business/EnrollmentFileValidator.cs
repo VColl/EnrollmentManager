@@ -3,7 +3,12 @@ using System.IO;
 
 namespace EnrollmentManager.Business
 {
-    public class EnrollmentFileValidator
+    public interface IEnrollmentFileValidator
+    {
+        void Validate(string inputFilePath, string outputFilePath, string validIndicator = "Valid", string invalidIndicator = "Invalid");
+    }
+
+    public class EnrollmentFileValidator : IEnrollmentFileValidator
     {
         private readonly IFullEnrollmentNumberValidator _validator;
 

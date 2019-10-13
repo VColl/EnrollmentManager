@@ -1,26 +1,27 @@
-﻿using EnrollmentManager.Business;
-using EnrollmentManager.InterfaceBusiness.Boundary;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using EnrollmentManager.InterfaceBusiness.Boundary.Views;
 
-namespace EnrollmentManager.Presenters.InterfaceBusiness
+namespace EnrollmentManager.InterfaceBusiness.Presenters
 {
     public class MainPresenter
     {
-        private IMainView _view;
-        private readonly IFullEnrollmentNumberGenerator _generator;
-        private readonly IFullEnrollmentNumberValidator _validator;
+        private readonly FilePresenter _inputFilePathPresenter;
+        private readonly FilePresenter _outputFilePathPresenter;
+        private readonly ActionsPresenter _actionsPresenter;
 
-        public MainPresenter(IFullEnrollmentNumberGenerator generator, IFullEnrollmentNumberValidator validator)
+        public MainPresenter(FilePresenter inputFilePathPresenter,
+            FilePresenter outputFilePathPresenter,
+            ActionsPresenter actionsPresenter)
         {
-            _generator = generator;
-            _validator = validator;
+            _inputFilePathPresenter = inputFilePathPresenter;
+            _outputFilePathPresenter = outputFilePathPresenter;
+            _actionsPresenter = actionsPresenter;
         }
 
         public void Setup(IMainView view)
         {
-            _view = view;
+            _inputFilePathPresenter.Setup(view.InputFilePathView, view.InputFileView);
+            _outputFilePathPresenter.Setup(view.OutputFilePathView, view.OutputFileView);
+            _actionsPresenter.Setup(view.ActionsView);
         }
     }
 }

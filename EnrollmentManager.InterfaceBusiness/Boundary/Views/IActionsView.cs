@@ -1,19 +1,19 @@
 ﻿using System;
 
-namespace EnrollmentManager.InterfaceBusiness.Boundary
+namespace EnrollmentManager.InterfaceBusiness.Boundary.Views
 {
-    public interface IActionsView
+    public interface IActionsView : IChildView
     {
         /// <summary>
         /// Generates the full enrollment number (with the check digit) for each enrollment
         /// number in the input file and publish them into the output file.
         /// </summary>
-        Action Generate();
+        Action Generate { get; set; }
 
         /// <summary>
         /// Verifies each enrollment number in the input file and publish them with
         /// their respective results into the output file.
         /// </summary>
-        Action Verify();
+        Action Validate { get; set; }
     }
 }
