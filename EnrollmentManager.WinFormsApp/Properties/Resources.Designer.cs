@@ -61,6 +61,15 @@ namespace EnrollmentManager.WinFormsApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Erollment Manager.
+        /// </summary>
+        internal static string ErollmentManager {
+            get {
+                return ResourceManager.GetString("ErollmentManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap icons8_available_updates_16 {

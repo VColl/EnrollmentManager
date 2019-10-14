@@ -1,20 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EnrollmentManager.InterfaceBusiness.Boundary.Views;
+using EnrollmentManager.InterfaceBusiness.Presenters;
+using Ninject;
 using System.Windows.Forms;
 
 namespace EnrollmentManager.WinFormsApp
 {
-    public partial class MainView : Form
+    public partial class MainView : Form, IMainView
     {
+        public IFilePathView InputFilePathView => inputFilePathView;
+        public IFilePathView OutputFilePathView => outputFilePathView;
+        public IFileView InputFileView => inputFileView;
+        public IFileView OutputFileView => outputFileView;
+        public IActionsView ActionsView => actionsView;
+
         public MainView()
         {
             InitializeComponent();
+
+            inputFilePathView.ParentView = this;
+            outputFilePathView.ParentView = this;
+            inputFileView.ParentView = this;
+            outputFileView.ParentView = this;
+            actionsView.ParentView = this;
+        }
+
+        [Inject]
+        public MainView(MainPresenter mainPresenter)
+            : this()
+        {
+            mainPresenter.Setup(this);
         }
     }
 }

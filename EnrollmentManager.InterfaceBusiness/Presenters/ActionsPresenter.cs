@@ -23,18 +23,18 @@ namespace EnrollmentManager.InterfaceBusiness.Presenters
             _view = view;
 
             _view.Generate += Generate;
-            _view.Validate += Validate;
+            _view.Verify += Validate;
         }
 
         private void Generate()
         {
-            _generator.Generate(_view.MainView.InputFilePathView.FilePath, _view.MainView.OutputFilePathView.FilePath,
+            _generator.Generate(_view.ParentView.InputFilePathView.FilePath, _view.ParentView.OutputFilePathView.FilePath,
                 _configuration.IgnoreInvalidLinesIndicator, _configuration.InvalidLineFormatIndicator);
         }
 
         private void Validate()
         {
-            _validator.Validate(_view.MainView.InputFilePathView.FilePath, _view.MainView.OutputFilePathView.FilePath);
+            _validator.Validate(_view.ParentView.InputFilePathView.FilePath, _view.ParentView.OutputFilePathView.FilePath);
         }
     }
 }

@@ -2,18 +2,18 @@
 {
     public interface IMainView
     {
-        IFilePathView InputFilePathView { get; set; }
-        IFilePathView OutputFilePathView { get; set; }
-        IFileView InputFileView { get; set; }
-        IFileView OutputFileView { get; set; }
-        IActionsView ActionsView { get; set; }
+        IFilePathView InputFilePathView { get; }
+        IFilePathView OutputFilePathView { get; }
+        IFileView InputFileView { get; }
+        IFileView OutputFileView { get; }
+        IActionsView ActionsView { get; }
     }
 
     public interface IChildView
     {
         /// <summary>
-        /// The main view that contains this one.
+        /// The view that contains this one.
         /// </summary>
-        IMainView MainView { get; }
+        IMainView ParentView { get; set; }
     }
 }

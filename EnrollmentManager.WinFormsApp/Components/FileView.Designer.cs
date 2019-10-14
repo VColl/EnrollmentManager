@@ -37,6 +37,7 @@
             // 
             this.gbFileContent.Controls.Add(this.tbFileContent);
             this.gbFileContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbFileContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFileContent.Location = new System.Drawing.Point(0, 0);
             this.gbFileContent.Name = "gbFileContent";
             this.gbFileContent.Size = new System.Drawing.Size(710, 551);
@@ -46,10 +47,11 @@
             // tbFileContent
             // 
             this.tbFileContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbFileContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFileContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFileContent.Location = new System.Drawing.Point(3, 16);
             this.tbFileContent.Multiline = true;
             this.tbFileContent.Name = "tbFileContent";
+            this.tbFileContent.ReadOnly = true;
             this.tbFileContent.Size = new System.Drawing.Size(704, 532);
             this.tbFileContent.TabIndex = 0;
             // 

@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.tbValidate = new System.Windows.Forms.Button();
+            this.btGenerate = new System.Windows.Forms.Button();
+            this.tbVerify = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // btGenerate
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Image = global::EnrollmentManager.WinFormsApp.Properties.Resources.icons8_play_16;
-            this.button2.Location = new System.Drawing.Point(512, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 25);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Gerar";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btGenerate.Image = global::EnrollmentManager.WinFormsApp.Properties.Resources.icons8_play_16;
+            this.btGenerate.Location = new System.Drawing.Point(512, 10);
+            this.btGenerate.Name = "btGenerate";
+            this.btGenerate.Size = new System.Drawing.Size(80, 25);
+            this.btGenerate.TabIndex = 0;
+            this.btGenerate.Text = "Gerar";
+            this.btGenerate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btGenerate.UseVisualStyleBackColor = true;
             // 
-            // tbValidate
+            // tbVerify
             // 
-            this.tbValidate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbValidate.Image = global::EnrollmentManager.WinFormsApp.Properties.Resources.icons8_checkmark_16;
-            this.tbValidate.Location = new System.Drawing.Point(598, 10);
-            this.tbValidate.Name = "tbValidate";
-            this.tbValidate.Size = new System.Drawing.Size(80, 25);
-            this.tbValidate.TabIndex = 0;
-            this.tbValidate.Text = "Validar";
-            this.tbValidate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.tbValidate.UseVisualStyleBackColor = true;
+            this.tbVerify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbVerify.Image = global::EnrollmentManager.WinFormsApp.Properties.Resources.icons8_checkmark_16;
+            this.tbVerify.Location = new System.Drawing.Point(598, 10);
+            this.tbVerify.Name = "tbVerify";
+            this.tbVerify.Size = new System.Drawing.Size(80, 25);
+            this.tbVerify.TabIndex = 0;
+            this.tbVerify.Text = "Verificar";
+            this.tbVerify.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.tbVerify.UseVisualStyleBackColor = true;
             // 
             // ActionsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.tbValidate);
+            this.Controls.Add(this.btGenerate);
+            this.Controls.Add(this.tbVerify);
             this.MaximumSize = new System.Drawing.Size(10000, 45);
             this.MinimumSize = new System.Drawing.Size(193, 45);
             this.Name = "ActionsView";
@@ -72,7 +72,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button tbValidate;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button tbVerify;
+        private System.Windows.Forms.Button btGenerate;
     }
 }

@@ -33,7 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,14 +68,17 @@
     <Compile Include="Components\FileView.Designer.cs">
       <DependentUpon>FileView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Configuration.cs" />
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notifier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowsAppModule.cs" />
     <EmbeddedResource Include="Components\ActionsView.resx">
       <DependentUpon>ActionsView.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +101,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,6 +132,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\icons8-checkmark-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnrollmentManager.Business\EnrollmentManager.Business.csproj">
+      <Project>{87edaac5-30d4-499c-ba8d-c1ac0ef30d9e}</Project>
+      <Name>EnrollmentManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnrollmentManager.InterfaceBusiness\EnrollmentManager.InterfaceBusiness.csproj">
+      <Project>{1AF74ACF-EE7D-4E54-8C0F-0BDBAB2DEA6A}</Project>
+      <Name>EnrollmentManager.InterfaceBusiness</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

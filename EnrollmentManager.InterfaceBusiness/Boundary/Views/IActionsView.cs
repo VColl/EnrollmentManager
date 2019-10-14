@@ -14,6 +14,6 @@ namespace EnrollmentManager.InterfaceBusiness.Boundary.Views
         /// Verifies each enrollment number in the input file and publish them with
         /// their respective results into the output file.
         /// </summary>
-        Action Validate { get; set; }
+        Action Verify { get; set; }
     }
 }

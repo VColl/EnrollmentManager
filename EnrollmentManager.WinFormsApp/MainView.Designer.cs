@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.actionsView1 = new EnrollmentManager.WinFormsApp.Components.ActionsView();
-            this.filePathView1 = new EnrollmentManager.WinFormsApp.Components.FilePathView();
-            this.filePathView2 = new EnrollmentManager.WinFormsApp.Components.FilePathView();
+            this.actionsView = new EnrollmentManager.WinFormsApp.Components.ActionsView();
+            this.inputFilePathView = new EnrollmentManager.WinFormsApp.Components.FilePathView();
+            this.outputFilePathView = new EnrollmentManager.WinFormsApp.Components.FilePathView();
             this.inputFileView = new EnrollmentManager.WinFormsApp.Components.FileView();
             this.outputFileView = new EnrollmentManager.WinFormsApp.Components.FileView();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
@@ -40,42 +40,44 @@
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // actionsView1
+            // actionsView
             // 
-            this.actionsView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.actionsView1.Location = new System.Drawing.Point(0, 405);
-            this.actionsView1.MaximumSize = new System.Drawing.Size(10000, 45);
-            this.actionsView1.MinimumSize = new System.Drawing.Size(193, 45);
-            this.actionsView1.Name = "actionsView1";
-            this.actionsView1.Size = new System.Drawing.Size(800, 45);
-            this.actionsView1.TabIndex = 0;
+            this.actionsView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.actionsView.Location = new System.Drawing.Point(0, 405);
+            this.actionsView.MaximumSize = new System.Drawing.Size(10000, 45);
+            this.actionsView.MinimumSize = new System.Drawing.Size(193, 45);
+            this.actionsView.Name = "actionsView";
+            this.actionsView.Size = new System.Drawing.Size(800, 45);
+            this.actionsView.TabIndex = 0;
             // 
-            // filePathView1
+            // inputFilePathView
             // 
-            this.filePathView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filePathView1.Location = new System.Drawing.Point(0, 0);
-            this.filePathView1.MaximumSize = new System.Drawing.Size(10000, 40);
-            this.filePathView1.MinimumSize = new System.Drawing.Size(0, 40);
-            this.filePathView1.Name = "filePathView1";
-            this.filePathView1.Size = new System.Drawing.Size(369, 40);
-            this.filePathView1.TabIndex = 1;
+            this.inputFilePathView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inputFilePathView.Label = "Entrada:";
+            this.inputFilePathView.Location = new System.Drawing.Point(5, 0);
+            this.inputFilePathView.MaximumSize = new System.Drawing.Size(10000, 40);
+            this.inputFilePathView.MinimumSize = new System.Drawing.Size(0, 40);
+            this.inputFilePathView.Name = "inputFilePathView";
+            this.inputFilePathView.Size = new System.Drawing.Size(364, 40);
+            this.inputFilePathView.TabIndex = 0;
             // 
-            // filePathView2
+            // outputFilePathView
             // 
-            this.filePathView2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filePathView2.Location = new System.Drawing.Point(0, 0);
-            this.filePathView2.MaximumSize = new System.Drawing.Size(10000, 40);
-            this.filePathView2.MinimumSize = new System.Drawing.Size(0, 40);
-            this.filePathView2.Name = "filePathView2";
-            this.filePathView2.Size = new System.Drawing.Size(427, 40);
-            this.filePathView2.TabIndex = 2;
+            this.outputFilePathView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.outputFilePathView.Label = "Saída:";
+            this.outputFilePathView.Location = new System.Drawing.Point(0, 0);
+            this.outputFilePathView.MaximumSize = new System.Drawing.Size(10000, 40);
+            this.outputFilePathView.MinimumSize = new System.Drawing.Size(0, 40);
+            this.outputFilePathView.Name = "outputFilePathView";
+            this.outputFilePathView.Size = new System.Drawing.Size(422, 40);
+            this.outputFilePathView.TabIndex = 1;
             // 
             // inputFileView
             // 
             this.inputFileView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inputFileView.Location = new System.Drawing.Point(0, 40);
+            this.inputFileView.Location = new System.Drawing.Point(5, 40);
             this.inputFileView.Name = "inputFileView";
-            this.inputFileView.Size = new System.Drawing.Size(369, 365);
+            this.inputFileView.Size = new System.Drawing.Size(364, 365);
             this.inputFileView.TabIndex = 3;
             // 
             // outputFileView
@@ -83,7 +85,7 @@
             this.outputFileView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.outputFileView.Location = new System.Drawing.Point(0, 40);
             this.outputFileView.Name = "outputFileView";
-            this.outputFileView.Size = new System.Drawing.Size(427, 365);
+            this.outputFileView.Size = new System.Drawing.Size(422, 365);
             this.outputFileView.TabIndex = 4;
             // 
             // splitContainer
@@ -95,12 +97,14 @@
             // splitContainer.Panel1
             // 
             this.splitContainer.Panel1.Controls.Add(this.inputFileView);
-            this.splitContainer.Panel1.Controls.Add(this.filePathView1);
+            this.splitContainer.Panel1.Controls.Add(this.inputFilePathView);
+            this.splitContainer.Panel1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             // 
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.outputFileView);
-            this.splitContainer.Panel2.Controls.Add(this.filePathView2);
+            this.splitContainer.Panel2.Controls.Add(this.outputFilePathView);
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.splitContainer.Size = new System.Drawing.Size(800, 405);
             this.splitContainer.SplitterDistance = 369;
             this.splitContainer.TabIndex = 5;
@@ -111,7 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer);
-            this.Controls.Add(this.actionsView1);
+            this.Controls.Add(this.actionsView);
             this.Name = "MainView";
             this.Text = "Enrollment Manager";
             this.splitContainer.Panel1.ResumeLayout(false);
@@ -124,9 +128,9 @@
 
         #endregion
 
-        private Components.ActionsView actionsView1;
-        private Components.FilePathView filePathView1;
-        private Components.FilePathView filePathView2;
+        private Components.ActionsView actionsView;
+        private Components.FilePathView inputFilePathView;
+        private Components.FilePathView outputFilePathView;
         private Components.FileView inputFileView;
         private Components.FileView outputFileView;
         private System.Windows.Forms.SplitContainer splitContainer;

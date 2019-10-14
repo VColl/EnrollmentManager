@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EnrollmentManager.Business;
+using Ninject;
+using System;
 using System.Windows.Forms;
 
 namespace EnrollmentManager.WinFormsApp
@@ -16,7 +15,11 @@ namespace EnrollmentManager.WinFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainView());
+
+            IKernel kernel = new StandardKernel(new WindowsAppModule(), new DefaultBusinessModule());
+            var mainView = kernel.Get<MainView>();
+
+            Application.Run(mainView);
         }
     }
 }
