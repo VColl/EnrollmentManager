@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DirectoryNotFound" xml:space="preserve">
+    <value>Diretório não encontrado.</value>
+  </data>
   <data name="FileNotFound" xml:space="preserve">
     <value>Arquivo não encontrado.</value>
   </data>
@@ -126,8 +129,14 @@
   <data name="GeneralProblem" xml:space="preserve">
     <value>Ocorreu algum problema. Verifique o log do sistema para maiores informações</value>
   </data>
+  <data name="InputFilePathCantBeEmpty" xml:space="preserve">
+    <value>O endereço do arquivo de entrada não pode ser vazio.</value>
+  </data>
   <data name="NotSupportedFile" xml:space="preserve">
     <value>Formato de arquivo não suportado.</value>
+  </data>
+  <data name="OutputFilePathCantBeEmpty" xml:space="preserve">
+    <value>O endereço do arquivo de saída não pode ser vazio.</value>
   </data>
   <data name="UnauthorizedAccess" xml:space="preserve">
     <value>Você não tem permissão para acessar este arquivo.</value>

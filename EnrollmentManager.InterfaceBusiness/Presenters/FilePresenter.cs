@@ -8,12 +8,14 @@ namespace EnrollmentManager.InterfaceBusiness.Presenters
 {
     public class FilePresenter
     {
+        private readonly IExceptionHandler _exceptionHandler;
         private readonly INotifier _notifier;
         private IFilePathView _filePathView;
         private IFileView _fileView;
 
-        public FilePresenter(INotifier notifier)
+        public FilePresenter(IExceptionHandler exceptionHandler, INotifier notifier)
         {
+            _exceptionHandler = exceptionHandler;
             _notifier = notifier;
         }
 
@@ -27,42 +29,25 @@ namespace EnrollmentManager.InterfaceBusiness.Presenters
 
         private void LoadFile()
         {
-            if (string.IsNullOrWhiteSpace(_filePathView.FilePath))
+            string filePath = _filePathView.FilePath;
+            if (string.IsNullOrWhiteSpace(filePath))
             {
                 _fileView.Clean();
                 _notifier.ShowError(Messages.FilePathCantBeEmpty);
                 return;
             }
 
-            var fileInfo = new FileInfo(_filePathView.FilePath);
-            if (!fileInfo.Exists)
-            {
-                _fileView.Clean();
-                _notifier.ShowError(Messages.FileNotFound);
-                return;
-            }
-
+            FileInfo fileInfo;
             string content;
             try
             {
-                content = File.ReadAllText(_filePathView.FilePath);
+                fileInfo = new FileInfo(filePath);
+                content = File.ReadAllText(filePath);
             }
-            catch (NotSupportedException)
+            catch (Exception e)
             {
                 _fileView.Clean();
-                _notifier.ShowError(Messages.NotSupportedFile);
-                return;
-            }
-            catch (UnauthorizedAccessException)
-            {
-                _fileView.Clean();
-                _notifier.ShowError(Messages.UnauthorizedAccess);
-                return;
-            }
-            catch
-            {
-                _fileView.Clean();
-                _notifier.ShowError(Messages.GeneralProblem);
+                _exceptionHandler.Handle(e);
                 return;
             }
 

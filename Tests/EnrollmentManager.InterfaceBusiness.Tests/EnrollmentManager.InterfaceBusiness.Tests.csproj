@@ -25,4 +25,19 @@
     <ProjectReference Include="..\..\EnrollmentManager.InterfaceBusiness\EnrollmentManager.InterfaceBusiness.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="ActionsPresenter.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ActionsPresenter.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="ActionsPresenter.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ActionsPresenter.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
 </Project>

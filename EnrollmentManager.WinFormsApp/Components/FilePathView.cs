@@ -9,7 +9,11 @@ namespace EnrollmentManager.WinFormsApp.Components
         public IMainView ParentView { get; set; }
         public Action LoadFile { get; set; }
 
-        public string FilePath => tbFilePath.Text;
+        public string FilePath
+        {
+            get => tbFilePath.Text;
+            set => tbFilePath.Text = value;
+        }
 
         public string Label
         {
@@ -22,17 +26,30 @@ namespace EnrollmentManager.WinFormsApp.Components
             InitializeComponent();
 
             btOpenFileDialog.Click += (obj, args) => OpenFileDialog();
-            tbFilePath.LostFocus += (obj, args) => LoadFile?.Invoke();
+
+            tbFilePath.KeyDown += (obj, args) =>
+            {
+                if (args.KeyCode == Keys.Enter)
+                    LoadFile?.Invoke();
+            };
         }
 
         private void OpenFileDialog()
         {
             var dialog = new OpenFileDialog();
-            if (dialog.ShowDialog(this) != DialogResult.OK)
-                return;
 
-            tbFilePath.Text = dialog.FileName;
-            LoadFile?.Invoke();
+            try
+            {
+                if (dialog.ShowDialog(this) != DialogResult.OK)
+                    return;
+
+                tbFilePath.Text = dialog.FileName;
+                LoadFile?.Invoke();
+            }
+            finally
+            {
+                dialog.Dispose();
+            }
         }
     }
 }

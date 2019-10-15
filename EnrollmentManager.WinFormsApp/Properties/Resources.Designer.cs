@@ -61,7 +61,7 @@ namespace EnrollmentManager.WinFormsApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Erollment Manager.
+        ///   Looks up a localized string similar to Gerenciador de Matrículas.
         /// </summary>
         internal static string ErollmentManager {
             get {
@@ -126,6 +126,16 @@ namespace EnrollmentManager.WinFormsApp.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8_play_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon MainIcon {
+            get {
+                object obj = ResourceManager.GetObject("MainIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

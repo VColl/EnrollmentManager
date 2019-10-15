@@ -55,6 +55,8 @@
             // 
             this.btOpenFileDialog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btOpenFileDialog.BackColor = System.Drawing.SystemColors.Control;
+            this.btOpenFileDialog.FlatAppearance.BorderSize = 0;
+            this.btOpenFileDialog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOpenFileDialog.Image = global::EnrollmentManager.WinFormsApp.Properties.Resources.icons8_folder_16;
             this.btOpenFileDialog.Location = new System.Drawing.Point(473, 8);
             this.btOpenFileDialog.Name = "btOpenFileDialog";

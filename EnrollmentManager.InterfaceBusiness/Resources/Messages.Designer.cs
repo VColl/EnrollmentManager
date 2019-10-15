@@ -61,6 +61,15 @@ namespace EnrollmentManager.InterfaceBusiness.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Diretório não encontrado..
+        /// </summary>
+        internal static string DirectoryNotFound {
+            get {
+                return ResourceManager.GetString("DirectoryNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Arquivo não encontrado..
         /// </summary>
         internal static string FileNotFound {
@@ -88,11 +97,29 @@ namespace EnrollmentManager.InterfaceBusiness.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O endereço do arquivo de entrada não pode ser vazio..
+        /// </summary>
+        internal static string InputFilePathCantBeEmpty {
+            get {
+                return ResourceManager.GetString("InputFilePathCantBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Formato de arquivo não suportado..
         /// </summary>
         internal static string NotSupportedFile {
             get {
                 return ResourceManager.GetString("NotSupportedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O endereço do arquivo de saída não pode ser vazio..
+        /// </summary>
+        internal static string OutputFilePathCantBeEmpty {
+            get {
+                return ResourceManager.GetString("OutputFilePathCantBeEmpty", resourceCulture);
             }
         }
         

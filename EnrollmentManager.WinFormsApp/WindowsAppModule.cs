@@ -10,6 +10,7 @@ namespace EnrollmentManager.WinFormsApp
         {
             Bind<IConfiguration>().To<Configuration>();
             Bind<INotifier>().To<Notifier>();
+            Bind<IExceptionHandler>().To<ExceptionHandler>();
         }
     }
 }

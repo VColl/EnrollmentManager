@@ -7,7 +7,7 @@ namespace EnrollmentManager.InterfaceBusiness.Boundary.Views
         /// <summary>
         /// The path of the file that will be displayed in the corresponding file view.
         /// </summary>
-        string FilePath { get; }
+        string FilePath { get; set; }
 
         /// <summary>
         /// When fired, the file described by the FilePath should be
