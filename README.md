@@ -33,26 +33,27 @@
 
 O arquivo de entrada deve conter as matrículas sem o DV separadas por linha. Para gerar o arquivo de saída, das matrículas com DV, basta inserir os endereços dos arquivos de entrada e saída nos locais indicados e clicar em "Gerar".
 
-![Gerar](ReadmeImages\Gerar.png)
+![Gerar](https://raw.githubusercontent.com/VColl/EnrollmentManager/master/ReadmeImages/Gerar.png)
 
 ### Verificação de Matrículas
 
 O arquivo de entrada deve conter as matrículas, com DV, a serem verificadas separadas por linha. Para gerar o arquivo de saída, com as matrículas verificadas, basta inserir os endereços dos arquivos de entrada e saída nos locais indicados e clicar em "Verificar".
 
-![Verificar](ReadmeImages\Verificar.png)
+![Verificar](https://raw.githubusercontent.com/VColl/EnrollmentManager/master/ReadmeImages/Verificar.png)
 
 ### Configurações Adicionais
 
 O arquivo de configuração do sistema, App.config (que é compilado para EnrollmentManager.WinFormsApp.exe.config), possui algumas configurações adicionais na tag appSettings.
 
-`` config 
+``` xml 
     <appSettings>
         <add key="ValidIndicator" value="Verdadeiro" />
         <add key="InvalidIndicator" value="Falso" />
         <add key="InvalidLineFormatIndicator" value="Formato Inválido" />
         <add key="IgnoreInvalidLinesIndicator" value="false" />
     </appSettings>
-``
+```
+
 - **ValidIndicator:** Indicador exibido ao lado de uma matrícula válida no arquivo de saída da verificação.
 
 - **InvalidIndicator:** Indicador exibido ao lado de uma matrícula inválida no arquivo de saída da verificação.
