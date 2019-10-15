@@ -7,6 +7,9 @@
   - [Requerimentos](#requerimentos)
   - [Descrição dos Projetos](#descri%c3%a7%c3%a3o-dos-projetos)
   - [Manual do Usuário](#manual-do-usu%c3%a1rio)
+    - [Geração de Matrículas com Dígito Verificador](#gera%c3%a7%c3%a3o-de-matr%c3%adculas-com-d%c3%adgito-verificador)
+    - [Verificação de Matrículas](#verifica%c3%a7%c3%a3o-de-matr%c3%adculas)
+    - [Configurações Adicionais](#configura%c3%a7%c3%b5es-adicionais)
 
 ## Requerimentos
 
@@ -28,24 +31,28 @@
 
 ### Geração de Matrículas com Dígito Verificador
 
-  O arquivo de entrada deve conter as matrículas sem o DV separadas por linha. Para gerar o arquivo de saída, das matrículas com DV, basta inserir os endereços dos arquivos de entrada e saída nos locais indicados e clicar em "Gerar".
+O arquivo de entrada deve conter as matrículas sem o DV separadas por linha. Para gerar o arquivo de saída, das matrículas com DV, basta inserir os endereços dos arquivos de entrada e saída nos locais indicados e clicar em "Gerar".
+
+![Gerar](ReadmeImages\Gerar.png)
 
 ### Verificação de Matrículas
 
-  O arquivo de entrada deve conter as matrículas, com DV, a serem verificadas separadas por linha. Para gerar o arquivo de saída, com as matrículas verificadas, basta inserir os endereços dos arquivos de entrada e saída nos locais indicados e clicar em "Verificar".
+O arquivo de entrada deve conter as matrículas, com DV, a serem verificadas separadas por linha. Para gerar o arquivo de saída, com as matrículas verificadas, basta inserir os endereços dos arquivos de entrada e saída nos locais indicados e clicar em "Verificar".
+
+![Verificar](ReadmeImages\Verificar.png)
 
 ### Configurações Adicionais
 
-  O arquivo de configuração do sistema, App.config (que é compilado para EnrollmentManager.WinFormsApp.exe.config), possui algumas configurações adicionais na tag appSettings.
+O arquivo de configuração do sistema, App.config (que é compilado para EnrollmentManager.WinFormsApp.exe.config), possui algumas configurações adicionais na tag appSettings.
 
-``` config
+`` config 
     <appSettings>
         <add key="ValidIndicator" value="Verdadeiro" />
         <add key="InvalidIndicator" value="Falso" />
         <add key="InvalidLineFormatIndicator" value="Formato Inválido" />
         <add key="IgnoreInvalidLinesIndicator" value="false" />
     </appSettings>
-```
+``
 - **ValidIndicator:** Indicador exibido ao lado de uma matrícula válida no arquivo de saída da verificação.
 
 - **InvalidIndicator:** Indicador exibido ao lado de uma matrícula inválida no arquivo de saída da verificação.
