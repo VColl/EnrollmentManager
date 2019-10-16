@@ -24,8 +24,8 @@
 | **EnrollmentManager.Business (.Net Standard 2.0)** | Contém a lógica de negócio da aplicação, i.e., as classes de cálculo, como o conversor para hexadecimal e o calculador de dígito de verificação. |
 | **EnrollmentManager.InterfaceBusiness (.Net Standard 2.0)** | Contém a lógica da interface da aplicação. Este é o projeto responsável por controlar o que ocorre durante a interação do usuário com a aplicação. |
 | **EnrollmentManager.WinFormsApp (.Net Framework 4.7.2)** | A aplicação desktop para Windows. Este projeto contém apenas a camada de interface de usuário, regida pelo projeto EnrollmentManager.InterfaceBusiness. |
-| **EnrollmentManager.Business.Tests (.Net Core 2.2)** | Contém os testes referêntes ao projeto EnrollmentManager.Business. |
-| **EnrollmentManager.InterfaceBusiness.Tests (.Net Core 2.2)** | Contém os testes referêntes ao projeto EnrollmentManager.InterfaceBusiness. |
+| **EnrollmentManager.Business.Tests (.Net Core 2.2)** | Contém os testes referentes ao projeto EnrollmentManager.Business. |
+| **EnrollmentManager.InterfaceBusiness.Tests (.Net Core 2.2)** | Contém os testes referentes ao projeto EnrollmentManager.InterfaceBusiness. |
 
 ## Manual do Usuário
 
